@@ -1,5 +1,63 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-aws-aws-sdk-go-v2 (1.30.3-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 1.30.3
+  * Bump versioned dependencies as per go.mod
+  * Add myself to the list of Uploaders
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Anthony Fok <foka@debian.org>  Sun, 01 Sep 2024 08:05:04 -0600
+
+golang-github-aws-aws-sdk-go-v2 (1.26.1-1) unstable; urgency=medium
+
+  * New upstream version 1.26.1
+  * Update dependencies per go.mod
+  * Bump Standards-Version to 4.7.0 (no change)
+  * Remove 0001-Fix-misalignment-of-struct-member.patch which has been
+    incorporated upstream.  Thanks to Daniel Swarbrick for the fix!
+
+ -- Anthony Fok <foka@debian.org>  Fri, 26 Apr 2024 06:07:50 -0600
+
+golang-github-aws-aws-sdk-go-v2 (1.24.1-2) unstable; urgency=medium
+
+  * Add new 0001-Fix-misalignment-of-struct-member.patch
+
+ -- Daniel Swarbrick <dswarbrick@debian.org>  Fri, 01 Mar 2024 12:33:02 +0000
+
+golang-github-aws-aws-sdk-go-v2 (1.24.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.24.1
+  * Bump versioned dependencies as per go.mod
+
+ -- Anthony Fok <foka@debian.org>  Fri, 23 Feb 2024 15:40:45 -0700
+
+golang-github-aws-aws-sdk-go-v2 (1.17.8-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop obsolete patches (applied upstream)
+
+ -- Daniel Swarbrick <dswarbrick@debian.org>  Thu, 06 Jul 2023 13:26:21 +0000
+
+golang-github-aws-aws-sdk-go-v2 (1.17.1-3) unstable; urgency=medium
+
+  * Team upload
+  * Use git mode in uscan watch file
+    Upstream has too many tags that causes pagination issue in http mode
+  * Backport patch for broken v4a tests
+  * Exclude benchmark in packaging
+    And drop golang-github-aws-aws-sdk-go-dev from dependencies
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 21 Feb 2023 13:50:33 +0800
+
+golang-github-aws-aws-sdk-go-v2 (1.17.1-2) unstable; urgency=medium
+
+  * Source-only re-upload
+  * Bump Standards-Version to 4.6.2 (no changes)
+  * Add new 01-Fix-32-bit_test_overflows.patch
+
+ -- Daniel Swarbrick <dswarbrick@debian.org>  Mon, 30 Jan 2023 01:20:23 +0000
+
+golang-github-aws-aws-sdk-go-v2 (1.17.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1022937)
+
+ -- Daniel Swarbrick <dswarbrick@debian.org>  Sat, 28 Jan 2023 09:00:56 +0000

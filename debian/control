@@ -1,15 +1,31 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-aws-aws-sdk-go-v2
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Daniel Swarbrick <dswarbrick@debian.org>,
+           Anthony Fok <foka@debian.org>,
+Section: golang
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-golang,
+               golang-any (>= 2:1.20~),
+               golang-github-aws-smithy-go-dev (>= 1.20.3),
+               golang-github-jmespath-go-jmespath-dev,
+               golang-golang-x-net-dev,
+Standards-Version: 4.7.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-aws-aws-sdk-go-v2
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-aws-aws-sdk-go-v2.git
+Homepage: https://github.com/aws/aws-sdk-go-v2
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/aws/aws-sdk-go-v2
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-aws-aws-sdk-go-v2-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: golang-github-aws-smithy-go-dev (>= 1.20.3),
+         golang-github-jmespath-go-jmespath-dev,
+         golang-golang-x-net-dev,
+         ${misc:Depends},
+Description: AWS SDK for the Go programming language (library)
+ aws-sdk-go-v2 is a replacement for the original AWS SDK for Go, currently
+ packaged as golang-github-aws-aws-sdk-go. Version 2 uses a more modular
+ interface, consistent with current Go packaging idioms.

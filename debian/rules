@@ -1,4 +1,8 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_EXCLUDES := \
+	example/service internal/codegen/cmd internal/repotools \
+	service/internal/benchmark
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --builddirectory=_build
